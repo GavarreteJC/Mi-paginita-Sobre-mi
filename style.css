@@ -1,0 +1,259 @@
+:root {
+  --color-fondo: #f8f9fb;
+  --color-texto: #222;
+  --color-resaltado: #0078ff;
+  --color-suave: #666;
+  --color-tarjeta: #fff;
+  --radio-borde: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* === Encabezado === */
+.encabezado-sitio {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-resaltado);
+  text-decoration: none;
+}
+
+.lista-nav {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.lista-nav a {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 500;
+}
+
+.lista-nav a:hover {
+  color: var(--color-resaltado);
+}
+
+/* === Inicio === */
+.inicio {
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.inicio-cuadricula {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.inicio-texto h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.resaltado {
+  color: var(--color-resaltado);
+}
+
+.descripcion {
+  color: var(--color-suave);
+  margin-bottom: 1.5rem;
+}
+
+.boton {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radio-borde);
+  font-weight: 600;
+}
+
+.boton.primario {
+  background-color: var(--color-resaltado);
+  color: #fff;
+}
+
+.boton.primario:hover {
+  background-color: #005fd4;
+}
+
+.inicio-imagen img {
+  width: 100%;
+  border-radius: 50%;
+  max-width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* === Sobre mí === */
+.sobre-mi {
+  padding: 4rem 0;
+}
+
+.sobre-cuadricula {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.sobre-mi h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.habilidades {
+  margin-top: 1rem;
+  list-style: square;
+  padding-left: 1.2rem;
+  color: var(--color-suave);
+}
+
+.estadisticas {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.dato strong {
+  font-size: 2rem;
+  color: var(--color-resaltado);
+}
+
+/* === Proyectos === */
+.proyectos {
+  padding: 4rem 0;
+}
+
+.proyectos h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cuadricula-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tarjeta {
+  background: var(--color-tarjeta);
+  border-radius: var(--radio-borde);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  display: block;
+}
+
+.tarjeta-cuerpo {
+  padding: 1rem 1.2rem;
+}
+
+.tarjeta-pie {
+  color: var(--color-suave);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* === Footer === */
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  padding: 2rem 0;
+}
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.redes a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.redes a:hover {
+  text-decoration: underline;
+}
+
+
+/* === Responsivo === */
+@media (max-width: 768px) {
+  .inicio {
+    text-align: center;
+  }
+
+  .lista-nav {
+    display: none;
+  }
+
+  .boton-menu {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+  }
+
+  .inicio-imagen img {
+    max-width: 180px;
+  }
+}
